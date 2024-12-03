@@ -159,9 +159,7 @@
             width: 100%;
             background-color: #2A273F; /* Matching background */
             padding: 5px 0; /* Even smaller padding */
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            position: relative; /* Makes the footer stay in its natural flow */
             text-align: center;
         }
 
@@ -242,9 +240,9 @@
                 font-size: 0.9rem; /* Slightly smaller font for small screens */
             }
 
-            /* Footer - Ensures the footer has proper positioning */
+            /* Ensure the footer works properly on mobile */
             .footer {
-                position: relative; /* Makes the footer stay in its natural flow */
+                width: 100%;
             }
         }
     </style>
