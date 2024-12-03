@@ -21,10 +21,18 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #1E1E2E; /* Mocha background */
             font-family: 'Roboto', sans-serif;
             color: #F8F8F2; /* Latte text */
             overflow: hidden;
+            animation: gradientAnimation 8s ease infinite; /* Background animation */
+            background: linear-gradient(45deg, #2A273F, #3E2A47, #1E1E2E, #2A273F);
+            background-size: 400% 400%; /* Ensures the gradient fills the entire area */
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
