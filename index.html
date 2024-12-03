@@ -157,7 +157,7 @@
         .footer {
             width: 100%;
             background-color: #2A273F; /* Matching background */
-            padding: 10px 0; /* Reduced padding */
+            padding: 5px 0; /* Even smaller padding */
             position: absolute;
             bottom: 0;
             left: 0;
@@ -167,27 +167,30 @@
         .scroll-container {
             display: flex;
             overflow-x: auto;
-            gap: 15px; /* Reduced gap between buttons */
+            gap: 10px; /* Even smaller gap between buttons */
             justify-content: center;
-            padding: 0 20px; /* Add some horizontal padding */
+            padding: 0 15px; /* Reduced horizontal padding */
         }
 
         .discord-link {
-            background-color: #7289DA;
-            color: white;
-            padding: 8px 20px; /* Reduced padding */
-            border-radius: 20px; /* Slightly smaller border radius */
-            font-size: 1rem; /* Reduced font size */
+            background-color: transparent;
+            border: 2px solid #7289DA; /* Hollow outline with Discord color */
+            color: #7289DA; /* Discord color text */
+            padding: 6px 16px; /* Reduced padding */
+            border-radius: 20px;
+            font-size: 0.9rem; /* Reduced font size */
             text-transform: uppercase;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .discord-link:hover {
-            background-color: #5b6e9e;
+            background-color: #7289DA;
+            color: white;
+            border-color: #5b6e9e; /* Slightly darker border on hover */
         }
 
         /* Responsiveness */
@@ -210,12 +213,12 @@
             }
 
             .scroll-container {
-                gap: 10px;
+                gap: 8px; /* Further reduce gap */
             }
 
             .discord-link {
-                padding: 8px 15px;
-                font-size: 0.9rem; /* Further reduced font size */
+                padding: 6px 12px;
+                font-size: 0.85rem; /* Further reduced font size */
             }
         }
     </style>
