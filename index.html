@@ -193,9 +193,15 @@
 
         /* Responsiveness */
         @media (max-width: 768px) {
+            body {
+                height: auto; /* Allow body to expand to fit content */
+                overflow: visible; /* Prevent overflow issues */
+            }
+
             .container {
                 grid-template-columns: 1fr; /* Stack the content on smaller screens */
                 text-align: center;
+                padding-bottom: 80px; /* Add extra padding at the bottom to make space for footer */
             }
 
             .text-container {
@@ -234,6 +240,11 @@
 
             .discord-link {
                 font-size: 0.9rem; /* Slightly smaller font for small screens */
+            }
+
+            /* Footer - Ensures the footer has proper positioning */
+            .footer {
+                position: relative; /* Makes the footer stay in its natural flow */
             }
         }
     </style>
