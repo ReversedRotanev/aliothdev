@@ -282,7 +282,7 @@
                     <!-- Replaced h1 with img tag -->
                     <img src="https://i.postimg.cc/YSrTg7CD/logo-removebg-preview-1.png" alt="Alioth.Dev Logo">
                     <p>No time, No motivation, No longer maintained. Information & resources are available on Discord</p>
-                    <a href="https://discord.gg/bWTbQpMv" class="f" target="_blank">Join Discord</a>
+                    <a href="https://discord.gg/bWTbQpMv" class="f" id="joinDiscord">Join Discord</a>
                 </div>
                 <div class="g"></div>
             </div>
@@ -308,6 +308,21 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // Add event listener for the "Join Discord" button
+        document.getElementById("joinDiscord").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent immediate redirection
+            // Ask the user if they have an IQ over 70
+            var userResponse = confirm("An IQ of 70+ is required to join.");
+            if (userResponse) {
+                // Ask if they are sure
+                var sureResponse = confirm("Seriously! This is your last warning. We're old, jaded & mean.");
+                if (sureResponse) {
+                    // If they confirm both, redirect to Discord
+                    window.location.href = "https://discord.gg/bWTbQpMv";
+                }
+            }
+        });
+
         // Main background particle effect
         particlesJS('particles-js', {
             particles: {
