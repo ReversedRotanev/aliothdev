@@ -60,6 +60,16 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             animation: a 1s ease-out;
             gap: 20px;
+            position: relative;
+        }
+
+        .b .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
 
         .c {
@@ -261,6 +271,9 @@
     <div id="particles-js"></div>
     <div class="a">
         <div class="b">
+            <!-- New particle container for the center box -->
+            <div class="particles-container" id="particles-center"></div>
+
             <div class="c">
                 <img src="https://raw.githubusercontent.com/pivoshenko/catppuccin-startpage/refs/heads/main/src/img/banners/cbg-2.gif" alt="GIF">
             </div>
@@ -295,6 +308,7 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // Main background particle effect
         particlesJS('particles-js', {
             particles: {
                 number: {
@@ -347,6 +361,59 @@
                     onhover: {
                         enable: true,
                         mode: 'repulse'
+                    }
+                }
+            }
+        });
+
+        // Center box particle effect
+        particlesJS('particles-center', {
+            particles: {
+                number: {
+                    value: 20,  // Subtle particle count
+                    density: {
+                        enable: true,
+                        value_area: 400
+                    }
+                },
+                color: {
+                    value: '#A6E22E'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000'
+                    }
+                },
+                opacity: {
+                    value: .3,  // More transparent for subtle effect
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: .1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 2,  // Smaller size for subtle effect
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 5,
+                        size_min: .1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: false  // No connecting lines for the center particles
+                }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: false  // No hover effect for the center particles
                     }
                 }
             }
