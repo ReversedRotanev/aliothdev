@@ -61,9 +61,22 @@
             justify-content: center;
             padding-left: 30px;
             position: relative;
+            width: 100%; /* Ensure it takes full width */
         }
 
-        .text-container h1 {
+        /* New Text Box for content */
+        .text-box {
+            padding: 20px;
+            background: #3B2A49; /* Slightly darker Macchiato for separation */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1; /* Ensure it is above the vertical line */
+            width: calc(100% - 35px); /* Make room for the vertical line */
+            margin-right: 35px; /* Prevent overlap with the vertical line */
+        }
+
+        .text-box h1 {
             font-size: 2.5rem;
             font-weight: 700;
             color: #F5A7B8; /* Rose color from Catppuccin */
@@ -71,7 +84,7 @@
             animation: fadeIn 2s ease-out;
         }
 
-        .text-container p {
+        .text-box p {
             font-size: 1.1rem;
             line-height: 1.6;
             color: #D9E0EE; /* Frappe text color */
@@ -80,7 +93,7 @@
         }
 
         /* Button for interaction */
-        .text-container .cta-button {
+        .cta-button {
             margin-top: 30px;
             padding: 12px 30px;
             background-color: #F4A261; /* Peach accent */
@@ -161,9 +174,12 @@
 
         <!-- Right side for text -->
         <div class="text-container">
-            <h1>Welcome to the Future</h1>
-            <p>This is a modern and interactive website design using the beautiful Catppuccin palette. The left side features an animated GIF, and the right side provides engaging content for users. With soft colors and smooth animations, this site adapts perfectly to both desktop and mobile views.</p>
-            <button class="cta-button">Get Started</button>
+            <!-- Text box containing all the text -->
+            <div class="text-box">
+                <h1>Welcome to the Future</h1>
+                <p>This is a modern and interactive website design using the beautiful Catppuccin palette. The left side features an animated GIF, and the right side provides engaging content for users. With soft colors and smooth animations, this site adapts perfectly to both desktop and mobile views.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
             <!-- Vertical Green Line -->
             <div class="vertical-line"></div>
         </div>
