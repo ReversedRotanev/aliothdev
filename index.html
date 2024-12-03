@@ -19,11 +19,11 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
             min-height: 100vh;
             font-family: 'Roboto', sans-serif;
             color: #F8F8F2; /* Latte text */
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll */
             animation: gradientAnimation 8s ease infinite; /* Background animation */
             background: linear-gradient(45deg, #2A273F, #3E2A47, #1E1E2E, #2A273F);
             background-size: 400% 400%; /* Ensures the gradient fills the entire area */
@@ -36,11 +36,11 @@
         }
 
         .content {
-            flex-grow: 1; /* Ensure the content area grows to fill available space */
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
+            flex: 1; /* Allow this part to grow and take available space */
         }
 
         .container {
@@ -169,6 +169,7 @@
             background-color: #2A273F; /* Matching background */
             padding: 5px 0; /* Even smaller padding */
             text-align: center;
+            position: relative;
         }
 
         .scroll-container {
@@ -289,3 +290,4 @@
     
 </body>
 </html>
+
