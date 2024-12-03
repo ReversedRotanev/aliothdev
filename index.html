@@ -157,7 +157,7 @@
         .footer {
             width: 100%;
             background-color: #2A273F; /* Matching background */
-            padding: 15px 0;
+            padding: 10px 0; /* Reduced padding */
             position: absolute;
             bottom: 0;
             left: 0;
@@ -167,16 +167,17 @@
         .scroll-container {
             display: flex;
             overflow-x: auto;
-            gap: 20px;
+            gap: 15px; /* Reduced gap between buttons */
             justify-content: center;
+            padding: 0 20px; /* Add some horizontal padding */
         }
 
         .discord-link {
             background-color: #7289DA;
             color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1.1rem;
+            padding: 8px 20px; /* Reduced padding */
+            border-radius: 20px; /* Slightly smaller border radius */
+            font-size: 1rem; /* Reduced font size */
             text-transform: uppercase;
             font-weight: 600;
             cursor: pointer;
@@ -209,12 +210,12 @@
             }
 
             .scroll-container {
-                gap: 15px;
+                gap: 10px;
             }
 
             .discord-link {
-                padding: 10px 20px;
-                font-size: 1rem;
+                padding: 8px 15px;
+                font-size: 0.9rem; /* Further reduced font size */
             }
         }
     </style>
@@ -253,7 +254,7 @@
     <script>
         // Optionally, you can add JS functionality here for extra interactivity.
         document.querySelector('.cta-button').addEventListener('click', () => {
-            alert('Not yet!');
+            alert('Welcome to the future!');
         });
     </script>
     
