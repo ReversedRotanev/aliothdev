@@ -159,7 +159,7 @@
             width: 100%;
             background-color: #2A273F; /* Matching background */
             padding: 5px 0; /* Even smaller padding */
-            position: fixed;
+            position: absolute;
             bottom: 0;
             left: 0;
             text-align: center;
@@ -178,25 +178,17 @@
             border: none; /* Removed border */
             color: #7289DA; /* Discord color text */
             padding: 0;
-            font-size: 1rem; /* Slightly larger font for readability */
+            font-size: 0.5rem; /* Slightly larger font for readability */
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 300;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
-        }
-
-        /* Initial blur effect for discord links */
-        .discord-link.blur {
-            filter: blur(5px); /* Apply blur */
-            opacity: 0.6; /* Slightly faded */
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .discord-link:hover {
             color: #5b6e9e; /* Darker Discord color */
-            filter: blur(0); /* Remove blur on hover */
-            opacity: 1; /* Full opacity on hover */
         }
 
         /* Responsiveness */
@@ -259,7 +251,7 @@
             <!-- Text box containing all the text -->
             <div class="text-box">
                 <h1>Alioth.Dev</h1>
-                <p>Due to a lack of time and motivation, the website is no longer maintained. Moving forward, this will serve as a landing page for Discord. All information & resources are now hosted within the server. If you don't see what you need reach out to me for access. </p>
+                <p>No time, No motivation, No longer maintained Information & resources are availabile in Discord </p>
                 <button class="cta-button">Join Beta Delphini</button>
             </div>
             <!-- Vertical Green Line -->
@@ -270,13 +262,13 @@
     <!-- Footer with horizontally scrolling Discord links -->
     <div class="footer">
         <div class="scroll-container">
-            <a href="https://discord.gg/5zmDURGG" class="discord-link blur" target="_blank">D2:R GID Bot</a>
-            <a href="https://discord.gg/kB3Akutcf3" class="discord-link blur" target="_blank">D2:R Maphack</a>
-            <a href="https://discord.gg/aGF9wMSJ" class="discord-link blur" target="_blank">D2:R Auction</a>
-            <a href="https://discord.gg/NqGHsMzUyN" class="discord-link blur" target="_blank">D2:R MultiLauncher</a>
-            <a href="https://discord.gg/sGCnE46y" class="discord-link blur" target="_blank">Gacha Reversing</a>
-            <a href="https://discord.gg/hellokittyfans" class="discord-link blur" target="_blank">WuWa Cheetos</a>
-            <a href="https://discord.gg/shikahub" class="discord-link blur" target="_blank">Genshin Cheetos</a>
+            <a href="https://discord.gg/5zmDURGG" class="discord-link" target="_blank">D2:R GID Bot</a>
+            <a href="https://discord.gg/kB3Akutcf3" class="discord-link" target="_blank">D2:R Maphack</a>
+            <a href="https://discord.gg/aGF9wMSJ" class="discord-link" target="_blank">D2:R Auction</a>
+            <a href="https://discord.gg/NqGHsMzUyN" class="discord-link" target="_blank">D2:R MultiLauncher</a>
+            <a href="https://discord.gg/sGCnE46y" class="discord-link" target="_blank">Gacha Reversing</a>
+            <a href="https://discord.gg/hellokittyfans" class="discord-link" target="_blank">WuWa Cheetos</a>
+            <a href="https://discord.gg/shikahub" class="discord-link" target="_blank">Genshin Cheetos</a>
         </div>
     </div>
 
