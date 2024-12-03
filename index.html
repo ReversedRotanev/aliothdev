@@ -54,12 +54,13 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* Text content */
+        /* Right side text content */
         .text-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding-left: 30px;
+            position: relative;
         }
 
         .text-container h1 {
@@ -97,6 +98,17 @@
             background-color: #E76F51; /* Darker peach */
         }
 
+        /* Green Vertical Line */
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 3px;
+            background-color: #00FF00; /* Green color */
+            border-radius: 2px;
+        }
+
         /* Animations */
         @keyframes fadeIn {
             from {
@@ -132,6 +144,10 @@
             .gif-container img {
                 max-width: 100%; /* Ensure the GIF does not overflow */
             }
+
+            .vertical-line {
+                display: none; /* Hide the line on smaller screens */
+            }
         }
     </style>
 </head>
@@ -148,6 +164,8 @@
             <h1>Welcome to the Future</h1>
             <p>This is a modern and interactive website design using the beautiful Catppuccin palette. The left side features an animated GIF, and the right side provides engaging content for users. With soft colors and smooth animations, this site adapts perfectly to both desktop and mobile views.</p>
             <button class="cta-button">Get Started</button>
+            <!-- Vertical Green Line -->
+            <div class="vertical-line"></div>
         </div>
     </div>
 
