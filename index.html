@@ -18,9 +18,9 @@
 
         body {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
             font-family: 'Roboto', sans-serif;
             color: #F8F8F2; /* Latte text */
             overflow: hidden;
@@ -33,6 +33,14 @@
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        .content {
+            flex-grow: 1; /* Ensure the content area grows to fill available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
 
         .container {
@@ -160,9 +168,6 @@
             width: 100%;
             background-color: #2A273F; /* Matching background */
             padding: 5px 0; /* Even smaller padding */
-            position: absolute;
-            bottom: 0;
-            left: 0;
             text-align: center;
         }
 
@@ -241,22 +246,24 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- Left side for the GIF -->
-        <div class="gif-container">
-            <img src="https://media.tenor.com/G8Bgyj10assAAAAM/lofi.gif" alt="Animated GIF">
-        </div>
-
-        <!-- Right side for text -->
-        <div class="text-container">
-            <!-- Text box containing all the text -->
-            <div class="text-box">
-                <h1>Alioth.Dev</h1>
-                <p>No time, No motivation, No longer maintained Information & resources are available in Discord</p>
-                <button class="cta-button">Join Beta Delphini</button>
+    <div class="content">
+        <div class="container">
+            <!-- Left side for the GIF -->
+            <div class="gif-container">
+                <img src="https://media.tenor.com/G8Bgyj10assAAAAM/lofi.gif" alt="Animated GIF">
             </div>
-            <!-- Vertical Green Line -->
-            <div class="vertical-line"></div>
+
+            <!-- Right side for text -->
+            <div class="text-container">
+                <!-- Text box containing all the text -->
+                <div class="text-box">
+                    <h1>Alioth.Dev</h1>
+                    <p>No time, No motivation, No longer maintained Information & resources are available in Discord</p>
+                    <button class="cta-button">Join Beta Delphini</button>
+                </div>
+                <!-- Vertical Green Line -->
+                <div class="vertical-line"></div>
+            </div>
         </div>
     </div>
 
