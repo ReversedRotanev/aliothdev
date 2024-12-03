@@ -153,6 +153,42 @@
             }
         }
 
+        /* Footer styles for horizontally scrolling links */
+        .footer {
+            width: 100%;
+            background-color: #2A273F; /* Matching background */
+            padding: 15px 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .discord-link {
+            background-color: #7289DA;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .discord-link:hover {
+            background-color: #5b6e9e;
+        }
+
         /* Responsiveness */
         @media (max-width: 768px) {
             .container {
@@ -170,6 +206,15 @@
 
             .vertical-line {
                 display: none; /* Hide the line on smaller screens */
+            }
+
+            .scroll-container {
+                gap: 15px;
+            }
+
+            .discord-link {
+                padding: 10px 20px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -192,6 +237,16 @@
             </div>
             <!-- Vertical Green Line -->
             <div class="vertical-line"></div>
+        </div>
+    </div>
+
+    <!-- Footer with horizontally scrolling Discord links -->
+    <div class="footer">
+        <div class="scroll-container">
+            <a href="https://discord.gg/example1" class="discord-link" target="_blank">Discord Invite 1</a>
+            <a href="https://discord.gg/example2" class="discord-link" target="_blank">Discord Invite 2</a>
+            <a href="https://discord.gg/example3" class="discord-link" target="_blank">Discord Invite 3</a>
+            <a href="https://discord.gg/example4" class="discord-link" target="_blank">Discord Invite 4</a>
         </div>
     </div>
 
