@@ -45,11 +45,13 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
-    .card img.banner {
+    iframe.discord-widget {
       width: 100%;
-      max-width: 500px;
-      border-radius: 20px;
-      border: 2px solid #ABE9B3;
+      max-width: 100%;
+      height: 100%;
+      min-height: 500px;
+      border: none;
+      border-radius: 10px;
     }
 
     .content {
@@ -57,7 +59,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
       gap: 20px;
     }
 
@@ -104,14 +105,6 @@
       background-color: #fff;
     }
 
-    iframe.discord-widget {
-      border: none;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 350px;
-      height: 500px;
-    }
-
     .moving-text-container {
       position: absolute;
       bottom: 80px;
@@ -148,7 +141,7 @@
       }
 
       iframe.discord-widget {
-        height: 400px;
+        min-height: 400px;
       }
     }
   </style>
@@ -156,7 +149,13 @@
 <body>
   <div class="main">
     <div class="card">
-      <img class="banner" src="https://raw.githubusercontent.com/pivoshenko/catppuccin-startpage/refs/heads/main/src/img/banners/banner_14.gif" alt="GIF" />
+      <!-- Discord Widget in place of GIF -->
+      <iframe
+        class="discord-widget"
+        src="https://discord.com/widget?id=1312568151438917684&theme=dark"
+        allowtransparency="true"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      ></iframe>
 
       <div class="content">
         <div class="box">
@@ -164,13 +163,6 @@
           <p>No time, no motivation, no longer maintained. Info & resources on Discord.</p>
           <a href="https://discord.gg/bWTbQpMv" class="btn" id="joinDiscord">Join Discord</a>
         </div>
-
-        <iframe
-          class="discord-widget"
-          src="https://discord.com/widget?id=1312568151438917684&theme=dark"
-          allowtransparency="true"
-          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-        ></iframe>
       </div>
     </div>
   </div>
