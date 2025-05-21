@@ -148,21 +148,24 @@
 </head>
 <body>
   <div class="main">
-    <div class="card">
-      <!-- Discord Widget in place of GIF -->
-      <iframe
-        class="discord-widget"
-        src="https://discord.com/widget?id=1312568151438917684&theme=dark"
-        allowtransparency="true"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-      ></iframe>
+<div class="card">
+  <!-- RIGHT SIDE (now first): Logo, Text, Button -->
+  <div class="content">
+    <div class="box">
+      <img class="logo" src="https://i.postimg.cc/YSrTg7CD/logo-removebg-preview-1.png" alt="Alioth.Dev Logo" />
+      <p>No time, no motivation, no longer maintained. Info & resources on Discord.</p>
+      <a href="https://discord.gg/bWTbQpMv" class="btn" id="joinDiscord">Join Discord</a>
+    </div>
+  </div>
 
-      <div class="content">
-        <div class="box">
-          <img class="logo" src="https://i.postimg.cc/YSrTg7CD/logo-removebg-preview-1.png" alt="Alioth.Dev Logo" />
-          <p>No time, no motivation, no longer maintained. Info & resources on Discord.</p>
-          <a href="https://discord.gg/bWTbQpMv" class="btn" id="joinDiscord">Join Discord</a>
-        </div>
+  <!-- LEFT SIDE (now second): Discord iframe -->
+  <iframe
+    class="discord-widget"
+    src="https://discord.com/widget?id=1312568151438917684&theme=dark"
+    allowtransparency="true"
+    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+  ></iframe>
+</div>
       </div>
     </div>
   </div>
